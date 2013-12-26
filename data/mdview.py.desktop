@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Markdown Viewer
+Exec=mdview.py %f
+Version=1.0
+Encoding=UTF-8
+Comment=View Markdown formatted text files
+Icon=mdview.py
+Terminal=false
+Categories=Development;Viewer;GTK;
+MimeType=text/x-markdown;
