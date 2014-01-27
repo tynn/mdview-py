@@ -1,0 +1,9 @@
+post_install() {
+	gtk-update-icon-cache -ft /usr/share/icons/hicolor
+	glib-compile-schemas /usr/share/glib-2.0/schemas
+}
+
+post_remove() {
+	gtk-update-icon-cache -ft /usr/share/icons/hicolor
+	glib-compile-schemas /usr/share/glib-2.0/schemas
+}
