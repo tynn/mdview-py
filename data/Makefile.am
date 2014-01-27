@@ -23,14 +23,16 @@ gtk-update-icon-cache:
 	gtk-update-icon-cache -ft $(DESTDIR)$(iconsdir) || :
 
 desktopentrydir = $(datarootdir)/applications
-desktopentry_DATA = mdview.py.desktop
+dist_desktopentry_DATA = mdview.py.desktop
 
 schemasdir = $(datarootdir)/glib-2.0/schemas
 dist_schemas_DATA = apps.mdview-py.gschema.xml
 glib-compile-schemas:
 	glib-compile-schemas $(DESTDIR)$(schemasdir) || :
 
-install-data-hook: update-data-config
-uninstall-hook: update-data-config
+install-data-hook: $(enable_data_hooks)update-data-config
+uninstall-hook: $(enable_data_hooks)update-data-config
 update-data-config: gtk-update-icon-cache glib-compile-schemas
+noupdate-data-config:
+	:
 

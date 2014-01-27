@@ -20,7 +20,11 @@ AC_CONFIG_AUX_DIR([config])
 
 AM_INIT_AUTOMAKE([foreign])
 
-AC_ARG_VAR([python], [command used for the shebang])
+AC_ARG_ENABLE([data-hooks], [])
+AS_IF([test x"$enable_data_hooks" != xno], [enable_data_hooks=])
+AC_SUBST([enable_data_hooks])
+
+AC_ARG_VAR([python], [interpreter used with #!])
 AM_SUBST_NOTMAKE([python])
 AS_IF([test -z "$python"], [python="/usr/bin/env python"])
 
