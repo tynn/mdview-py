@@ -1,7 +1,7 @@
-#!@python@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #	This file is part of mdview.py
-#	
+#
 #	Copyright (c) 2013 Christian Schmitz <tynn.dev@gmail.com>
 #
 #	mdview.py is free software: you can redistribute it and/or modify
@@ -17,10 +17,11 @@
 #	You should have received a copy of the GNU General Public License
 #	along with mdview.py. If not, see <http://www.gnu.org/licenses/>.
 
-### @configure_input@ ###
-
-__APPNAME__ = "@PACKAGE_NAME@"
-__VERSION__ = "@VERSION@"
+__appname__ = "mdview.py"
+__version__ = "1.0b"
+__author__ = "Christian Schmitz"
+__author_email__ = "tynn.dev@gmail.com"
+__url__ = "https://github.com/tynn/mdview-py"
 
 
 import os, sys
@@ -246,13 +247,13 @@ class UriLabel (Gtk.Label) :
 class AboutDialog (Gtk.AboutDialog) :
 
 	def __init__ (self, parent) :
-		Gtk.AboutDialog.__init__(self, parent = parent, program_name = __APPNAME__, version = __VERSION__)
+		Gtk.AboutDialog.__init__(self, parent = parent, program_name = __appname__, version = __version__)
 		self.connect('delete-event', _true)
 		self.connect('response', self.hide)
 
-		self.set_comments(_("{0} is a simple viewer for Markdown files.").format(__APPNAME__))
-		self.set_website("https://github.com/tynn/mdview-py")
-		self.set_copyright("Copyright © 2013 Christian Schmitz")
+		self.set_comments(_("{0} is a simple viewer for Markdown files.").format(__appname__))
+		self.set_website(__url__)
+		self.set_copyright("Copyright © 2013 {0}".format(__author__))
 		self.set_license_type(Gtk.License.GPL_3_0)
 
 	def present (self, *args) : Gtk.AboutDialog.present(self)
@@ -345,7 +346,7 @@ class PreferencesDialog (Gtk.Dialog) :
 class ErrorDialog (Gtk.MessageDialog) :
 
 	def __init__ (self, error_msg, parent = None) :
-		Gtk.MessageDialog.__init__(self, parent, Gtk.DialogFlags.DESTROY_WITH_PARENT, Gtk.MessageType.ERROR, Gtk.ButtonsType.OK, error_msg, title = __APPNAME__)
+		Gtk.MessageDialog.__init__(self, parent, Gtk.DialogFlags.DESTROY_WITH_PARENT, Gtk.MessageType.ERROR, Gtk.ButtonsType.OK, error_msg, title = __appname__)
 		self.connect('response', self.destroy)
 
 	def destroy (self, *args) : Gtk.MessageDialog.destroy(self)
@@ -384,10 +385,10 @@ class MdView (Gtk.Window) :
 	monitor = None
 
 	def __init__ (self, *files) :
-		Gtk.Window.__init__(self, title = __APPNAME__)
+		Gtk.Window.__init__(self, title = __appname__)
 		self.connect('delete-event', Gtk.main_quit)
 		self.set_default_size(600, 500)
-		self.set_icon_name(__APPNAME__)
+		self.set_icon_name(__appname__)
 
 		self._setup_gui()
 
@@ -508,7 +509,7 @@ class MdView (Gtk.Window) :
 			self.zoom_100()
 			self.menu.set_document_available(True)
 			self.menu.set_view_source(False)
-			self.set_title("{2} ({1}) - {0}".format(__APPNAME__, *os.path.split(self.file.replace(self.USER_HOME, '~', 1))))
+			self.set_title("{2} ({1}) - {0}".format(__appname__, *os.path.split(self.file.replace(self.USER_HOME, '~', 1))))
 			return old_file or True
 		self.file = old_file
 		self.html = old_html

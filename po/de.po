@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdview.py 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-21 03:11+0100\n"
-"PO-Revision-Date: 2013-12-23 04:04+0100\n"
+"POT-Creation-Date: 2015-01-26 21:10+0100\n"
+"PO-Revision-Date: 2015-01-26 21:16+0100\n"
 "Last-Translator: Christian Schmitz <tynn.dev@gmail.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -27,111 +27,119 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.6.10\n"
 
-#: mdview.py.in:159
+#: ../mdview.py:144
+msgid "_Export HTML"
+msgstr "HTML exportieren"
+
+#: ../mdview.py:153
+msgid "_View"
+msgstr "_Ansicht"
+
+#: ../mdview.py:157
+msgid "_View source"
+msgstr "HTML _anzeigen"
+
+#: ../mdview.py:159
+msgid "_Markdown"
+msgstr "_Markdown"
+
+#: ../mdview.py:160
 msgid "E_nable attributes"
 msgstr "Attribute _erlauben"
 
-#: mdview.py.in:277
-msgid "Enable attributes"
-msgstr "Attribute erlauben"
+#: ../mdview.py:161
+msgid "S_mart emphasis"
+msgstr "_Intelligentes Hervorheben"
 
-#: mdview.py.in:274
+#: ../mdview.py:162
+msgid "_Lazy ol"
+msgstr "_Lazy ol"
+
+#: ../mdview.py:164
+msgid "_Output format"
+msgstr "_Ausgabeformat"
+
+#: ../mdview.py:170
+msgid "_Safe mode"
+msgstr "_Schutzmodus"
+
+#: ../mdview.py:171
+msgid "_None"
+msgstr "_Keiner"
+
+#: ../mdview.py:172
+msgid "Re_place"
+msgstr "Er_setzen"
+
+#: ../mdview.py:173
+msgid "_Remove"
+msgstr "_Entfernen"
+
+#: ../mdview.py:174
+msgid "_Escape"
+msgstr "Es_capen"
+
+#: ../mdview.py:254
+#, python-brace-format
+msgid "{0} is a simple viewer for Markdown files."
+msgstr "{0} ist ein einfacher Betrachter für Markdown Dateien."
+
+#: ../mdview.py:275
+msgid "None"
+msgstr "Keiner"
+
+#: ../mdview.py:275
+msgid "Replace"
+msgstr "Ersetzen"
+
+#: ../mdview.py:275
+msgid "Remove"
+msgstr "Entfernen"
+
+#: ../mdview.py:275
 msgid "Escape"
 msgstr "Escapen"
 
-#: mdview.py.in:521
+#: ../mdview.py:278
+msgid "Enable attributes"
+msgstr "Attribute erlauben"
+
+#: ../mdview.py:279
+msgid "Smart emphasis"
+msgstr "Intelligentes Hervorheben"
+
+#: ../mdview.py:280
+msgid "Lazy ol"
+msgstr "Lazy ol"
+
+#: ../mdview.py:365
+msgid "Text files"
+msgstr "Text Dateien"
+
+#: ../mdview.py:523
 #, python-brace-format
 msgid "Failed loading file {0}"
 msgstr "Während des Ladens von {0} ist ein Fehler aufgetreten"
 
-#: mdview.py.in:528
+#: ../mdview.py:530
 #, python-brace-format
 msgid "Failed writing file {0}"
 msgstr "Während des Speicherns von {0} ist ein Fehler aufgetreten"
 
-#: mdview.py.in:593
-msgid "HTML files"
-msgstr "HTML Dateien"
-
-#: mdview.py.in:279
-msgid "Lazy ol"
-msgstr "Lazy ol"
-
-#: mdview.py.in:581
+#: ../mdview.py:583
 msgid "Markdown files"
 msgstr "Markdown Dateien"
 
-#: mdview.py.in:274
-msgid "None"
-msgstr "Keiner"
+#: ../mdview.py:595
+msgid "HTML files"
+msgstr "HTML Dateien"
 
-#: mdview.py.in:171
-msgid "Re_place"
-msgstr "Er_setzen"
+#: ../data/mdview.py.desktop.in.h:1
+msgid "Markdown Viewer"
+msgstr "Markdown Betrachter"
 
-#: mdview.py.in:274
-msgid "Remove"
-msgstr "Entfernen"
-
-#: mdview.py.in:274
-msgid "Replace"
-msgstr "Ersetzen"
-
-#: mdview.py.in:160
-msgid "S_mart emphasis"
-msgstr "_Intelligentes Hervorheben"
-
-#: mdview.py.in:278
-msgid "Smart emphasis"
-msgstr "Intelligentes Hervorheben"
-
-#: mdview.py.in:363
-msgid "Text files"
-msgstr "Text Dateien"
-
-#: mdview.py.in:173
-msgid "_Escape"
-msgstr "Es_capen"
-
-#: mdview.py.in:143
-msgid "_Export HTML"
-msgstr "HTML exportieren"
-
-#: mdview.py.in:161
-msgid "_Lazy ol"
-msgstr "_Lazy ol"
-
-#: mdview.py.in:158
-msgid "_Markdown"
-msgstr "_Markdown"
-
-#: mdview.py.in:170
-msgid "_None"
-msgstr "_Keiner"
-
-#: mdview.py.in:163
-msgid "_Output format"
-msgstr "_Ausgabeformat"
-
-#: mdview.py.in:172
-msgid "_Remove"
-msgstr "_Entfernen"
-
-#: mdview.py.in:169
-msgid "_Safe mode"
-msgstr "_Schutzmodus"
-
-#: mdview.py.in:152
-msgid "_View"
-msgstr "_Ansicht"
-
-#: mdview.py.in:156
-msgid "_View source"
-msgstr "HTML _anzeigen"
-
-#: mdview.py.in:253
-#, python-brace-format
-msgid "{0} is a simple viewer for Markdown files."
-msgstr "{0} ist ein einfacher Betrachter für Markdown Dateien."
+#: ../data/mdview.py.desktop.in.h:2
+msgid "View Markdown formatted text files"
+msgstr "Betrachte Markdown-Textdateien als HTML"
