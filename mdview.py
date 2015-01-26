@@ -298,14 +298,13 @@ class PreferencesDialog (Gtk.Dialog) :
 		box.pack_start(lazy_ol, False, False, False)
 		box.show_all()
 
-		tab_length.set_adjustment(Gtk.Adjustment(4, 1, 24, 1, 4, 0))
-
 		self.md_options = MarkdownOptions()
 		self.md_options.html_replacement_text = html_replacement_text.get_text()
-		self.md_options.tab_length = tab_length.get_value_as_int()
 		self.md_options.enable_attributes = enable_attributes.get_active()
 		self.md_options.smart_emphasis = smart_emphasis.get_active()
 		self.md_options.lazy_ol = lazy_ol.get_active()
+
+		tab_length.set_adjustment(Gtk.Adjustment(4, 1, 24, 1, 4, 0))
 
 		if self.SCHEMA in Gio.Settings.list_schemas() :
 			settings = Gio.Settings.new(self.SCHEMA)
