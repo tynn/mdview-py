@@ -253,8 +253,9 @@ class AboutDialog (Gtk.AboutDialog) :
 
 		self.set_comments(_("{0} is a simple viewer for Markdown files.").format(__appname__))
 		self.set_website(__url__)
-		self.set_copyright("Copyright © 2013 {0}".format(__author__))
+		self.set_copyright("Copyright © 2013 " + __author__)
 		self.set_license_type(Gtk.License.GPL_3_0)
+		self.set_logo_icon_name(None)
 
 	def present (self, *args) : Gtk.AboutDialog.present(self)
 
@@ -387,7 +388,7 @@ class MdView (Gtk.Window) :
 		Gtk.Window.__init__(self, title = __appname__)
 		self.connect('delete-event', Gtk.main_quit)
 		self.set_default_size(600, 500)
-		self.set_icon_name(__appname__)
+		self.set_default_icon_name(__appname__)
 
 		self._setup_gui()
 
