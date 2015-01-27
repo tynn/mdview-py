@@ -620,7 +620,7 @@ class MdView (Gtk.Window) :
 def main () :
 	import signal, gettext
 	signal.signal(signal.SIGINT, signal.SIG_DFL)
-	gettext.bindtextdomain(gettext.textdomain('@PACKAGE@'), '@LOCALEDIR@')
+	gettext.textdomain(__appname__)
 	MdView(*sys.argv[1:]).show_all()
 	Gtk.main()
 
