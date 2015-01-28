@@ -16,6 +16,8 @@
 #	along with mdview.py. If not, see <http://www.gnu.org/licenses/>.
 
 from DistUtilsExtra.auto import setup, install_auto, sdist_auto
+import sys
+sys.dont_write_bytecode = True
 import mdview
 
 _noegg = lambda (key, _) :  key != 'install_egg_info'
