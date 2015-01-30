@@ -6,5 +6,5 @@ Encoding=UTF-8
 _Comment=View Markdown formatted text files
 Icon=mdview.py
 Terminal=false
-Categories=Development;Viewer;GTK;
+Categories=Utility;Viewer;GTK;
 MimeType=text/x-markdown;
